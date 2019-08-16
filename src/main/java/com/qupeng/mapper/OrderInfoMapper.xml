@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        SYSTEM
+        "05-mybatis-1.0/src/main/java/com/qupeng/mybatis/parsing/mybatis-1.0-mapper.dtd">
+
+<mapper namespace="com.qupeng.mapper.OrderInfoMapper">
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="com.qupeng.model.OrderInfo">
+    select 
+    *
+    from o_order_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+</mapper>

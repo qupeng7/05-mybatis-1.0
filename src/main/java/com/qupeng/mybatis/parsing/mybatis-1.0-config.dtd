@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+qupeng
+-->
+<!ELEMENT configuration (environment?, mappers?)>
+
+<!ELEMENT environment (dataSource+)>
+<!ATTLIST environment
+default CDATA #REQUIRED
+>
+
+<!ELEMENT dataSource (property*)>
+<!ATTLIST dataSource
+id CDATA #REQUIRED
+>
+
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+name CDATA #REQUIRED
+value CDATA #REQUIRED
+>
+
+<!ELEMENT mappers (mapper*)>
+
+<!ELEMENT mapper EMPTY>
+<!ATTLIST mapper
+resource CDATA #IMPLIED
+>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        SYSTEM
+        "05-mybatis-1.0/src/main/java/com/qupeng/mybatis/parsing/mybatis-1.0-config.dtd">
+
+<!--dtd的xml约束是有顺序，标签顺序不能错-->
+<configuration>
+
+    <!--环境配置-->
+    <environment default="dev">
+        <dataSource id="dev">
+            <property name="driver" value="com.mysql.jdbc.Driver"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/mybatis?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8&amp;rewriteBatchedStatements=true&amp;useSSL=false"/>
+            <property name="username" value="root"/>
+            <property name="password" value="root"/>
+        </dataSource>
+
+        <dataSource id="test">
+            <property name="driver" value="com.mysql.jdbc.Driver"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/mybatis?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8&amp;rewriteBatchedStatements=true&amp;useSSL=false"/>
+            <property name="username" value="root"/>
+            <property name="password" value="root"/>
+        </dataSource>
+
+    </environment>
+
+    <!--映射器-->
+    <mappers>
+        <mapper resource="com/qupeng/mapper/UserInfoMapper.xml"/>
+        <mapper resource="com/qupeng/mapper/OrderInfoMapper.xml"/>
+    </mappers>
+
+</configuration>
